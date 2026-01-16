@@ -1,13 +1,8 @@
 <?php
 
 require "functions.php";
-//require "router.php";
 require "Database.php";
+require "Response.php";
+require "router.php";
 
-$db = new Database();
-$posts = $db->query("select * from posts")->fetchAll(PDO::FETCH_ASSOC);
 
-
-foreach ($posts as $post) {
-	echo $post["id"] . " " . $post["title"] . "<br>";
-}
