@@ -1,29 +1,16 @@
 <?php
 
-$books = [
-	[
-		"title" => "PHP for beginners",
-		"author" => "James Larovski",
-		"releaseDate" => 1995,
-		"purchaseUrl" => "https://github.com/James/php-engine",
-	],
-	[
-		"title" => "Clean code",
-		"author" => "Sarah Smith",
-		"releaseDate" => 2000,
-		"purchaseUrl" => "https://github.com/SarahSmith/clean-code",
-	],
-	[
-		"title" => "Spacing principles in ui design",
-		"author" => "Adrian samosa",
-		"releaseDate" => 2012,
-		"purchaseUrl" => "https://github.com/Adrians/Spacing-principles",
-	]
-
+$business = [
+	"name" => "Become wicked",
+	"cost" => 14,
+	"categories" => ["Testing", "PHP", "Java", "Go"],
 ];
-
-$filteredBooks = array_filter($books, function ($book) {
-	return $book["releaseDate"] < 2012;
-});
+function register($user)
+{
+	// create the user record in db
+	// Log them in.
+	// Send a welcome email.
+	// redirect to their dashboard.
+}
 
 require "index.view.php";
