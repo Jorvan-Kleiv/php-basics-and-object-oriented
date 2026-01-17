@@ -10,13 +10,9 @@ $note = $db->query(
 		':id' => $id,
 		':user' => 2
 	]
-)->fetch();
-if (!$note) {
-	abort(Response::NOT_FOUND);
-}
+)->find();
+
 $currentUserId = 2;
-if ($notes["user_id"] != $currentUserId) {
-	abort(Response::UNAUTHORIZED);
-}
+authorize($notes["user_id"] != $currentUserId);
 
 require "views/note.view.php";
